@@ -19,6 +19,12 @@ namespace BakeryPastry.Model
       int fullPrice = pastryOrder * 2;
       return fullPrice;
     }
-      
+
+    public static int DiscountPastryCost(int pastryOrder)
+    {
+      int discountCost = 4;
+      return discountCost;
+  
+    } 
   }
 }

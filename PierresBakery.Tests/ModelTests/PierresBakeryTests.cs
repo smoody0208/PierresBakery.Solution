@@ -43,5 +43,13 @@ namespace Bakery.Tests
       int result = Pastry.AddPastryCost(amount);
       Assert.AreEqual(result, 2);
     }
-  }  
+
+    [TestMethod]
+    public void AddTestItem_DiscountPastryItem_3()
+    {
+      int amount = 3;
+      int result = Pastry.DiscountPastryCost(amount);
+      Assert.AreEqual(result, 5);
+    }
+  }   
 }
