@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BakeryBread.Model;
+using BakeryPastry.Model;
 
 namespace Bakery.Tests
 {
@@ -29,6 +30,16 @@ namespace Bakery.Tests
       int result = Bread.DiscountBreadCost(amount);
       Assert.AreEqual(result, 10);
     }
-
   }
+  
+  [TestClass]
+  public class PastryTests
+  {
+    [TestMethod]
+    public void AddTestItem_ForOneItem_One()
+    {
+      int amount = 1;
+      int result = Bread.AddPastryCost(amount);
+      Assert.AreEqual(result, 5);
+    }
 }

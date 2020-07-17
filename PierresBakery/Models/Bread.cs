@@ -3,29 +3,28 @@ using System.Collections.Generic;
 
 namespace BakeryBread.Model
 {
-  public static class Bread
+  class Bread
   {
     public int BreadCost { get; set; }
     public int BreadOrder { get; set; }
     
-    public Bread (int BreadOrder)
+    public static Bread (int BreadOrder)
     {
       BreadCost = 5;
       BreadOrder = breadOrder;
     }
 
-    public static int AddBreadCost(int breadOrder)
+    private static int AddBreadCost(int breadOrder)
     {
-      int fullPrice = userInput * breadCost;
+      int fullPrice = breadOrder * breadCost;
       return fullPrice;
     }
       
 
-    public static int DiscountBreadCost(int breadOrder)
+    private static int DiscountBreadCost(int breadOrder)
     { 
-      int discountCost = (userInput * breadCost) - ((userInput / 3)*breadCost);
+      int discountCost = (breadOrder * breadCost) - ((breadOrder / 3)*breadCost);
       return discountCost;
     }
-
   }
 }
