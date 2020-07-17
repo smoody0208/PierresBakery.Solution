@@ -1,16 +1,17 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Calendar;
+using Bakery.Model;
 
-namespace Calendar.Tests
+namespace Bakery.Tests
 {
   [TestClass]
-  public class LeapYearTests
+  public class BreadTests
   {
     [TestMethod]
-    public void IsLeapYear_NumberDivisibleByFour_True()
+    public void AddBreadItem_ForOneItem_One()
     {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(true, testLeapYear.IsLeapYear(2012));
+      int amount = 1;
+      int result = Bread.AddBreadCost(amount);
+      Assert.AreEqual(result, 2);
     }
   }
 }
