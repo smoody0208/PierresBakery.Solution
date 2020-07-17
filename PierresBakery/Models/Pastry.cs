@@ -16,15 +16,16 @@ namespace BakeryPastry.Model
 
     public int AddPastryItem()
     {
-      int fullPrice = PastryOrder * PastryCost;
-      return fullPrice;
+      if (PastryOrder >= 3)
+      {
+        int discountCost = ((PastryOrder / 3) * 5);
+        return discountCost;
+      }  
+      else
+      {
+        int fullPrice = PastryOrder * PastryCost;
+        return fullPrice;
+      }
     }
-
-    public int DiscountPastryCost()
-    {
-      int discountCost = (PastryOrder / 3) * 5;
-      return discountCost;
-  
-    } 
   }
 }
