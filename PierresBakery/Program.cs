@@ -21,9 +21,7 @@ namespace Program
         int breadOrder = int.Parse(Console.ReadLine());
         Bread newBreadOrder = new Bread(breadOrder);
         int firstBreadOrder = newBreadOrder.AddBreadCost();
-        Console.WriteLine(firstBreadOrder);
-        Console.WriteLine("Would you like to add another item to your order? Type 'yes' or 'no'.");
-        string AnotherOrder = Console.ReadLine();
+        Console.WriteLine($"Total: ${newBreadOrder.AddBreadCost()}");
       }
       else if(menuOption == "pastry")
       { 
@@ -31,13 +29,12 @@ namespace Program
         Console.WriteLine("How many loafs would you like to order?");
         int pastryOrder = int.Parse(Console.ReadLine());
         Bread newPastryOrder = new Bread(pastryOrder);
-        int firstPastryOrder = newPastryOrder.AddBreadCost();
-        Console.WriteLine(firstBreadOrder);
+        Console.WriteLine($"Total: ${newPastryOrder.AddBreadCost()}");
       }  
     }
-    public static CheckOut()
+    public static void CheckOut()
     {
-      Console.WriteLine
+      Console.WriteLine("Would you like to add another item to your order? Type 'yes' or 'no'.");
     }
   }
 }
