@@ -10,26 +10,25 @@ namespace Bakery.Tests
     [TestMethod]
     public void AddBreadItem_ForOneItem_One()
     {
-   
-      int amount = 1;
-      int result = Bread.AddBreadCost(amount);
-      Assert.AreEqual(result, 5);
+      Bread BreadItem = new Bread(1);
+      int result = 5;
+      Assert.AreEqual(result, BreadItem.AddBreadCost());
     }
 
     [TestMethod]
     public void AddBreadItem_ForThreeItem_Three()
     {
-      int amount = 3;
-      int result = Bread.AddBreadCost(amount);
-      Assert.AreEqual(result, 15);
+      Bread BreadItem = new Bread(3);
+      int result = 15;
+      Assert.AreEqual(result, BreadItem.AddBreadCost());
     }
 
     [TestMethod]
     public void AddBreadItemDiscount_ForThreeItem_Three()
     {
-      int amount = 3;
-      int result = Bread.DiscountBreadCost(amount);
-      Assert.AreEqual(result, 10);
+      Bread BreadItem = new Bread(3);
+      int result = 10;
+      Assert.AreEqual(result, BreadItem.DiscountBreadCost());
     }
   }
   
@@ -39,17 +38,17 @@ namespace Bakery.Tests
     [TestMethod]
     public void AddTestItem_ForOneItem_One()
     {
-      int amount = 1;
-      int result = Pastry.AddPastryCost(amount);
-      Assert.AreEqual(result, 2);
+      Pastry PastryItem = new Pastry(1);
+      int result = 2;
+      Assert.AreEqual(result, PastryItem.AddPastryItem());
     }
 
     [TestMethod]
     public void AddTestItem_DiscountPastryItem_3()
     {
-      int amount = 3;
-      int result = Pastry.DiscountPastryCost(amount);
-      Assert.AreEqual(result, 5);
+      Pastry PastryItem = new Pastry(3);
+      int result = 5;
+      Assert.AreEqual(result, PastryItem.DiscountPastryCost());
     }
   }   
 }

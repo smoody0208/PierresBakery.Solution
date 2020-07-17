@@ -10,17 +10,17 @@ namespace BakeryPastry.Model
     
     public Pastry (int pastryOrder)
     {
-      PastryCost = 5;
+      PastryCost = 2;
       PastryOrder = pastryOrder;
     }
 
-    public static int AddPastryCost(int pastryOrder)
+    public int AddPastryItem()
     {
-      int fullPrice = pastryOrder * 2;
+      int fullPrice = PastryOrder * PastryCost;
       return fullPrice;
     }
 
-    public static int DiscountPastryCost(int PastryOrder)
+    public int DiscountPastryCost()
     {
       int discountCost = (PastryOrder / 3) * 5;
       return discountCost;

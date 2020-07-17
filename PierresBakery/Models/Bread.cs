@@ -14,16 +14,16 @@ namespace BakeryBread.Model
       BreadCost = 5;
     }
 
-    public static int AddBreadCost(int breadOrder)
+    public int AddBreadCost()
     {
-      int fullPrice = breadOrder * 5;
+      int fullPrice = BreadOrder * 5;
       return fullPrice;
     }
       
 
-    public static int DiscountBreadCost(int breadOrder)
+    public int DiscountBreadCost()
     { 
-      int discountCost = (breadOrder * 5) - ((breadOrder / 3)*5);
+      int discountCost = (BreadOrder * 5) - ((BreadOrder / 3)*5);
       return discountCost;
     }
   }
