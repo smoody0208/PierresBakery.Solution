@@ -19,16 +19,25 @@ namespace Program
         Console.WriteLine("Todays specials! Buy 2, get 1 free. A single loaf costs $5.");
         Console.WriteLine("How many loafs would you like to order?");
         int breadOrder = int.Parse(Console.ReadLine());
-        Bread newOrder = new Bread(breadOrder);
-        string firstBreadOrder = newOrder.AddBreadCost(breadOrder);
+        Bread newBreadOrder = new Bread(breadOrder);
+        int firstBreadOrder = newBreadOrder.AddBreadCost();
         Console.WriteLine(firstBreadOrder);
         Console.WriteLine("Would you like to add another item to your order? Type 'yes' or 'no'.");
         string AnotherOrder = Console.ReadLine();
-        if(AnotherOrder == "yes")
-        { 
-          Main();
-        } 
+      }
+      else if(menuOption == "pastry")
+      { 
+        Console.WriteLine("Todays specials! Buy 1 for $2 or 3 for $5.");
+        Console.WriteLine("How many loafs would you like to order?");
+        int pastryOrder = int.Parse(Console.ReadLine());
+        Bread newPastryOrder = new Bread(pastryOrder);
+        int firstPastryOrder = newPastryOrder.AddBreadCost();
+        Console.WriteLine(firstBreadOrder);
       }  
+    }
+    public static CheckOut()
+    {
+      Console.WriteLine
     }
   }
 }

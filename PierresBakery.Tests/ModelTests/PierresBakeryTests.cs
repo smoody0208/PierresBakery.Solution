@@ -18,7 +18,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void AddBreadItem_ForThreeItem_Three()
     {
-      Bread BreadItem = new Bread(3);
+      Bread BreadItem = new Bread(4);
       int result = 15;
       Assert.AreEqual(result, BreadItem.AddBreadCost());
     }
@@ -28,7 +28,7 @@ namespace Bakery.Tests
     {
       Bread BreadItem = new Bread(3);
       int result = 10;
-      Assert.AreEqual(result, BreadItem.DiscountBreadCost());
+      Assert.AreEqual(result, BreadItem.AddBreadCost());
     }
   }
   
@@ -48,7 +48,7 @@ namespace Bakery.Tests
     {
       Pastry PastryItem = new Pastry(3);
       int result = 5;
-      Assert.AreEqual(result, PastryItem.DiscountPastryCost());
+      Assert.AreEqual(result, PastryItem.AddPastryItem());
     }
   }   
 }

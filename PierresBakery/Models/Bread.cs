@@ -14,7 +14,7 @@ namespace BakeryBread.Model
       BreadCost = 5;
     }
 
-    public int AddBreadCost(int breadOrder)
+    public int AddBreadCost()
     {
       if (BreadOrder >= 3)
       {
