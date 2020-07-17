@@ -41,7 +41,7 @@ namespace Bakery.Tests
     {
       int amount = 1;
       int result = Pastry.AddPastryCost(amount);
-      Assert.AreEqual(result, 5);
+      Assert.AreEqual(result, 2);
     }
   }  
 }
