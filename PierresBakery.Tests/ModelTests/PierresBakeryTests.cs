@@ -13,5 +13,14 @@ namespace Bakery.Tests
       int result = Bread.AddBreadCost(amount);
       Assert.AreEqual(result, 5);
     }
+
+    [TestMethod]
+    public void AddBreadItem_ForThreeItem_One()
+    {
+      int amount = 3;
+      int result = Bread.AddBreadCost(amount);
+      Assert.AreEqual(result, 15);
+    }
+
   }
 }
