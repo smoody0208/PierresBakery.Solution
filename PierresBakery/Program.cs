@@ -32,9 +32,21 @@ namespace Program
         Console.WriteLine($"Total: ${newPastryOrder.AddBreadCost()}");
       }  
     }
+    public static List<int> totalBreadList = new List<int>();
+    public static List<int> totalPastryList = new List<int>();
     public static void CheckOut()
     {
       Console.WriteLine("Would you like to add another item to your order? Type 'yes' or 'no'.");
+      string checkOut = Console.ReadLine();
+      
+      if (checkout == "yes")
+      {
+        //need to create a list to add items to
+      }
+      else
+      {
+        Main();
+      }
     }
   }
 }
