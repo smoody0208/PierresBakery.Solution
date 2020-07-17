@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Bakery.Model;
+using BakeryBread.Model;
 
 namespace Bakery.Tests
 {
@@ -22,7 +22,7 @@ namespace Bakery.Tests
       Assert.AreEqual(result, 15);
     }
 
-      [TestMethod]
+    [TestMethod]
     public void AddBreadItemDiscount_ForThreeItem_Three()
     {
       int amount = 3;

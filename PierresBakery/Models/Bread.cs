@@ -1,28 +1,28 @@
 using System;
 using System.Collections.Generic;
 
-namespace Bakery.Model
+namespace BakeryBread.Model
 {
   public static class Bread
   {
-    // public int TotalBread { get; set; }
+    public int BreadCost { get; set; }
+    public int BreadOrder { get; set; }
     
-    // public Bread (int totalBread)
-    // {
-    //   TotalBread = totalBread;
-    // }
-
-    public static int AddBreadCost(int userInput)
+    public Bread (int BreadOrder)
     {
-      int breadCost = 5;
+      BreadCost = 5;
+      BreadOrder = breadOrder;
+    }
+
+    public static int AddBreadCost(int breadOrder)
+    {
       int fullPrice = userInput * breadCost;
       return fullPrice;
     }
       
 
-    public static int DiscountBreadCost(int userInput)
+    public static int DiscountBreadCost(int breadOrder)
     { 
-      int breadCost = 5;
       int discountCost = (userInput * breadCost) - ((userInput / 3)*breadCost);
       return discountCost;
     }
