@@ -3,18 +3,18 @@ using System.Collections.Generic;
 
 namespace BakeryPastry.Model
 {
-  class Pastry
+  public class Pastry
   {
     public int PastryCost { get; set; }
     public int PastryOrder { get; set; }
     
-    public static Pastry (int PastryOrder)
+    public Pastry (int pastryOrder)
     {
-      BreadCost = 5;
-      BreadOrder = breadOrder;
+      PastryCost = 5;
+      PastryOrder = pastryOrder;
     }
 
-    private static int AddPastryCost(int breadOrder)
+    public static int AddPastryCost(int pastryOrder)
     {
       int fullPrice = 0;
       return fullPrice;

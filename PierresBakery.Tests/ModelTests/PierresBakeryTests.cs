@@ -10,6 +10,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void AddBreadItem_ForOneItem_One()
     {
+   
       int amount = 1;
       int result = Bread.AddBreadCost(amount);
       Assert.AreEqual(result, 5);
@@ -39,7 +40,8 @@ namespace Bakery.Tests
     public void AddTestItem_ForOneItem_One()
     {
       int amount = 1;
-      int result = Bread.AddPastryCost(amount);
+      int result = Pastry.AddPastryCost(amount);
       Assert.AreEqual(result, 5);
     }
+  }  
 }
