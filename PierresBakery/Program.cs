@@ -54,7 +54,7 @@ namespace Program
       else if(menuOption == "pastry")
       { 
         Console.WriteLine("Todays specials! Buy 1 for $2 or 3 for $5.");
-        Console.WriteLine("How many loafs would you like to order?");
+        Console.WriteLine("How many pastries would you like to order?");
         int pastryOrder = int.Parse(Console.ReadLine());
         Pastry newPastryOrder = new Pastry(pastryOrder);
         int firstPastryOrder = newPastryOrder.AddPastryItem();
