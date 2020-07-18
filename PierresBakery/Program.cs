@@ -18,7 +18,7 @@ namespace Program
     public static void CheckOut()
     {
       Console.WriteLine("Would you like to add another item to your order? Type 'yes' or 'no'.");
-      string checkOut = Console.ReadLine()>ToLower();
+      string checkOut = Console.ReadLine().ToLower();
       
       if (checkOut == "yes")
       {
@@ -26,14 +26,19 @@ namespace Program
       }
       else
       {
-        Main();
+        int total = 0;
+        for(int i = 0; i < totalBreadList.Count; i ++)
+        {
+          total += totalBreadList[i];
+        }
+        Console.WriteLine("Your order total comes to $" + total);
       }
     }
 
     public static void MainMenu()
     {
       Console.WriteLine("please type in 'bread' for bread options or 'pastry' for pastry options.");
-      string menuOption = Console.ReadLine().ToLower;
+      string menuOption = Console.ReadLine().ToLower();
 
       if (menuOption == "bread")
       {
@@ -44,6 +49,7 @@ namespace Program
         int firstBreadOrder = newBreadOrder.AddBreadCost();
         totalBreadList.Add(firstBreadOrder);
         Console.WriteLine($"Total: ${newBreadOrder.AddBreadCost()}");
+        CheckOut();
       }
       else if(menuOption == "pastry")
       { 
@@ -54,6 +60,7 @@ namespace Program
         int firstPastryOrder = newPastryOrder.AddPastryItem();
         totalBreadList.Add(firstPastryOrder);
         Console.WriteLine($"Total: ${newPastryOrder.AddPastryItem()}");
+        CheckOut();
       }  
     }
   }
