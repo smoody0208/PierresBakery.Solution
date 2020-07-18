@@ -11,8 +11,29 @@ namespace Program
     {
       Console.WriteLine("Welcome to Pierres Bakery!");
       Console.WriteLine("Would you like to order bread or pastries?");
+      MainMenu();
+    }
+    public static List<int> totalBreadList = new List<int>{};
+    
+    public static void CheckOut()
+    {
+      Console.WriteLine("Would you like to add another item to your order? Type 'yes' or 'no'.");
+      string checkOut = Console.ReadLine()>ToLower();
+      
+      if (checkOut == "yes")
+      {
+        MainMenu();
+      }
+      else
+      {
+        Main();
+      }
+    }
+
+    public static void MainMenu()
+    {
       Console.WriteLine("please type in 'bread' for bread options or 'pastry' for pastry options.");
-      string menuOption = Console.ReadLine();
+      string menuOption = Console.ReadLine().ToLower;
 
       if (menuOption == "bread")
       {
@@ -21,6 +42,7 @@ namespace Program
         int breadOrder = int.Parse(Console.ReadLine());
         Bread newBreadOrder = new Bread(breadOrder);
         int firstBreadOrder = newBreadOrder.AddBreadCost();
+        totalBreadList.Add(firstBreadOrder);
         Console.WriteLine($"Total: ${newBreadOrder.AddBreadCost()}");
       }
       else if(menuOption == "pastry")
@@ -28,25 +50,11 @@ namespace Program
         Console.WriteLine("Todays specials! Buy 1 for $2 or 3 for $5.");
         Console.WriteLine("How many loafs would you like to order?");
         int pastryOrder = int.Parse(Console.ReadLine());
-        Bread newPastryOrder = new Bread(pastryOrder);
-        Console.WriteLine($"Total: ${newPastryOrder.AddBreadCost()}");
+        Pastry newPastryOrder = new Pastry(pastryOrder);
+        int firstPastryOrder = newPastryOrder.AddPastryItem();
+        totalBreadList.Add(firstPastryOrder);
+        Console.WriteLine($"Total: ${newPastryOrder.AddPastryItem()}");
       }  
-    }
-    public static List<int> totalBreadList = new List<int>();
-    public static List<int> totalPastryList = new List<int>();
-    public static void CheckOut()
-    {
-      Console.WriteLine("Would you like to add another item to your order? Type 'yes' or 'no'.");
-      string checkOut = Console.ReadLine();
-      
-      if (checkout == "yes")
-      {
-        //need to create a list to add items to
-      }
-      else
-      {
-        Main();
-      }
     }
   }
 }
