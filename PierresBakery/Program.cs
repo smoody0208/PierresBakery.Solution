@@ -1,5 +1,5 @@
-using BakeryBread.Model;
-using BakeryPastry.Model;
+using Bakery.Models;
+using Bakery.Models;
 using System.Collections.Generic;
 using System;
 
