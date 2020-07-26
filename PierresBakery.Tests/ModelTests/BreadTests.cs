@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BakeryBread.Model;
-using BakeryPastry.Model;
+using Bakery.Models;
+
 
 namespace Bakery.Tests
 {

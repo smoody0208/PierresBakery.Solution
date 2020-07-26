@@ -3,7 +3,7 @@ using BakeryPastry.Model;
 using System.Collections.Generic;
 using System;
 
-namespace Program
+namespace Bakery
 {
   public class Program
   {
